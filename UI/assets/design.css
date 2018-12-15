@@ -1,0 +1,53 @@
+#wholebody{
+    
+
+    height:900px;
+    
+}
+#home{
+    width:60%;
+    height: 78%;
+    float: left;
+    
+    margin-left: 0%;
+    text-align: center;
+    padding-top: 10px;
+    position: relative;
+    line-height: 200%;
+  
+
+}
+.forms{
+    background-color: rgb(161, 187, 204);
+    width: 30%;
+    height: 58%;
+    text-align: center;
+    line-height: 250%;
+    font-size: 150%;
+    padding-top: 10px;
+    float: right;
+    border-radius: 7px;
+    margin-right:10%;
+    margin-top: 10%;
+    
+
+}
+
+input[type=text]{
+    width:90%;
+    height:30px;
+}
+input[type=email]{
+    width:90%;
+    height:30px;
+}
+input[type=password]{
+    width:90%;
+    height:30px;
+}
+input[type=button]{
+    background-color: rgb(48, 48, 139);
+    color: aliceblue;
+    padding: 12px 20px;
+    border-radius: 5px;
+}
