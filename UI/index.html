@@ -1,38 +1,26 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="assets/design.css"/>
-        <script type="text/Javascript">
-       
-        </script>
-       
+        <link rel="stylesheet" type="text/css" href="assets/register.css"/>
+        
          </head>
          <body>
              <div id="wholebody">
-             <div id="home">
-                 <h1>I-Reporter</h1>
-                 <p>Corruption is a huge bane to Africa’s development. 
-                  African countries must develop novel and localised solutions that will curb this menace,
-                   hence the birth of iReporter. iReporter enables any/every citizen to bring any
-                    form of corruption to the notice of appropriate authorities and the general public..
-                     Users can also report on things that needs government intervention</p>
-                     <p><img src="" width="" height=""/></p>
-             </div>
-
              <div class="forms">
              <form name="harriet" action="" method="POST">
-                <h3>Login here</h3>
-                 <input type="text" placeholder="Username" required name="username" ><br/>
+                <h3>I-Reporter Login</h3>
+                 <input type="text" placeholder="Username" required name="username" required /><br/>
                  <input type="password" name="password" placeholder="Password"/><br/>
                  <input type="button" onclick="check(this.form)" value="Login"/><br/>
                  or <a href="register.html">Sign up</a>
                 </form>
+
                 <script language="javascript">
                     function check(form)
                     {
                         if(form.username.value=="user" && form.password.value=="user")
                         {
-                            window.location = "home.html"
+                            window.location = "user.html"
                         }
                         else if(form.username.value=="admin" && form.password.value=="admin")
                         {
@@ -48,6 +36,10 @@
                 
                 </script>
             </div>
+                    
+          
+
+             
         </div>
          </body>
 </html>
