@@ -1,0 +1,145 @@
+#wholebody{
+    background-color:#ffffff;
+}
+body{
+   
+    width:80%;
+    background-image: url('dark.jpg');
+    margin-left: 10%;
+}
+.forms{
+    background-color: rgba(224, 223, 223, 0.938);
+    width: 50%;
+    height: 58%;
+    text-align: center;
+    line-height: 250%;
+    font-size: 150%;
+    padding-top: 30px;
+    float: center;
+    border-radius: 7px;
+    margin-right:10%;
+    margin-left: 20%;
+    margin-top: 40px;
+    
+
+}
+a{
+    text-decoration: none;
+    background-color: rgb(4, 1, 14);
+    padding:10px;
+    padding-right: 450px;
+    font-weight: bolder;
+    color: #efefef;
+}
+a:hover{
+    text-decoration: none;
+    background-color: rgb(194, 195, 201);
+    padding:10px;
+    font-weight: bolder;
+    color: #000;
+    cursor: pointer;
+}
+ 
+ 
+  #banner{
+    background-color: #000;
+    width:100%;
+    height:100px;
+    text-align: center;
+    color: rgb(144, 210, 248);
+    font-size: 200%;
+  
+
+  }
+
+  #contents{
+      padding:150px;
+      line-height: 250%;
+  }
+
+input[type=text]{
+    width:60%;
+    height:40px;
+}
+input[type=email]{
+    width:90%;
+    height:40px;
+}
+input[type=password]{
+    width:90%;
+    height:40px;
+}
+input[type=button]{
+    background-color: rgb(4, 1, 14);
+    color: aliceblue;
+    padding: 12px 20px;
+    border-radius: 5px;
+    width:90%;
+}
+input[type=button]:hover{
+    background-color: rgb(194, 195, 201);
+}
+ul{
+    list-style: none;
+    float: right;
+    margin-right: 35%;
+    
+    
+   
+}
+ul li{
+    display: inline;
+    
+}
+ul li a{
+    text-decoration: none;
+    color: #ffff;
+    background-color: rgb(4, 1, 14);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.126em;
+    padding: 10px;
+
+}
+ul li a:hover{
+    color: #000;
+    background-color: rgb(194, 195, 201);
+}
+
+
+#red{
+    color: red;
+}
+#frame {
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+}
+#page {
+      padding:60px 10px 10px 10px;
+      background-color:#ffffff;
+}
+#header {
+    background-color:#cccccc;
+    height:120px;
+    padding:10px;}
+#nav {
+    height:40px;
+    padding:10px;}
+#footer {
+    background-color:#cccccc;
+    height:40px;
+    padding:10px;
+    clear:both;
+    border-top:20px solid #ffffff;
+}
+.col1, .col2, .col3 {
+    float:left;
+    width:280px;
+    background-color:#cccccc;
+    padding:10px;
+    margin-top:20px;
+    height:173px;
+}
+.col1, .col2 {
+    margin-right:20px;
+}
