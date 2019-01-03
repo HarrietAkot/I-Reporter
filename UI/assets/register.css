@@ -9,8 +9,9 @@
 }
 a{
     text-decoration: none;
-    color: rgb(55, 206, 226);
+    color: rgb(6, 11, 12);
     font-size: 20px;
+    background-color: rgb(215, 250, 241);
 }
 #home{
     width:60%;
