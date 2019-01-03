@@ -13,10 +13,8 @@
         <ul class="navigation">
             
             <li><a href="user.html">Home</a></li>
-            <li><a href="redflag.html">Red-flag</a></li>
-            <li><a href="intervene.html">Intervention</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="redflag.html">Records</a></li>
+            <li><a href="admin.html">Admin</a></li>
             <li><a href="index.html">Logout</a></li>
         </ul>
     </div>
@@ -24,7 +22,13 @@
 <form action="" method="POST">
     
           <h3>Create a red-flag record:</h3>
-          
+            <select name="Incident-type" placeholder="Incident type">
+                <option selected="Redflag" value="Redflag">Red-flag</option>
+                <option value="intervention">Intervention</option>
+
+
+            </select>
+          <br/>
             
             <input type="text" placeholder="Incident title" name="title" required="">
              
@@ -39,8 +43,9 @@
             <input type="file" name="image" id="image" multiple="" value="Upload">
             <br/>
             <input type="button" value="Save record"/>
-      </div>
+     
   </form>
+</div>
 </div>
 </body>
   </html>
