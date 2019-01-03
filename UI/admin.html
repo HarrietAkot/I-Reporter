@@ -11,11 +11,9 @@
                     <div id="menu">
                     <ul class="navigation">
                         
-                        <li><a href="admin.html">Home</a></li>
-                        <li><a href="redflag.html">Red-flag</a></li>
-                        <li><a href="intervene.html">Intervention</a></li>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="user.html">Home</a></li>
+                        <li><a href="redflag.html">Records</a></li>
+                        <li><a href="admin.html">Admin</a></li>                
                         <li><a href="index.html">Logout</a></li>
                     </ul>
                 </div>
@@ -23,32 +21,24 @@
     
     <div id="frame">
 <div id="page">
-
-
-<div class="col1"> 
-    <h3>Incident 1</h3> 
-    <h4>Type</h4>
-    <h4>location</h4> 
-    Edit status<br/>
-    Delete   
-</div>
-
-<div class="col2">
-        <h3>Incident 1</h3> 
-        <h4>Type</h4>
-        <h4>location</h4> 
-        Edit status<br/>
-        Delete     
-</div>
-
-<div class="col3" > 
-    <h3>Incident 1</h3> 
-    <h4>Type</h4>
-    <h4>location</h4> 
-    Edit status<br/>
-    Delete      
-</div>
-<div id="footer"> footer</div>
+<table>
+    <tr>
+        <th>Incident Type</th><th>Incident title</th><th>Incident location</th><th>Incident status</th><th>Delete</th>
+    </tr>
+    <tr>
+        <td>Red-flag record</td><td>Corrupt police officers</td><td>Central Police Station</td><td><select name="incident status"> <option value="rejected">Rejected</option><option value="Resolved">Resolved</option><option value="investigation">Under Investigation</option></select></td><td><a href="#">Delete </a>    </td>
+    </tr>
+    <tr>
+        <td>Intervention record</td><td>Bad road</td><td>Makindye</td><td><select name="incident status"> <option value="rejected">Rejected</option><option value="Resolved">Resolved</option><option value="investigation">Under Investigation</option></select></td><td><a href="#">Delete </a>    </td>
+    </tr>
+    <tr>
+        <td>Intervention record</td><td>Damaged electric poles</td><td>Nakawa</td><td><select name="incident status"> <option value="rejected">Rejected</option><option value="Resolved">Resolved</option><option value="investigation">Under Investigation</option></select></td><td><a href="#">Delete </a>    </td>
+    </tr>
+    <tr>
+        <td>Red-flag record</td><td>Bribery</td><td>High court</td><td><select name="incident status"> <option value="rejected">Rejected</option><option value="Resolved">Resolved</option><option value="investigation">Under Investigation</option></select></td><td><a href="#">Delete </a>    </td>
+    </tr>
+</table>
+<div id="footer"> Designed by Harriet Akot</div>
 </div >
 </div >
 </div>
