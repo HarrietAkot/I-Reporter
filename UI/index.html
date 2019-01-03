@@ -11,30 +11,19 @@
                 <h3>I-Reporter Login</h3>
                  <input type="text" placeholder="Username" required name="username" required /><br/>
                  <input type="password" name="password" placeholder="Password"/><br/>
-                 <input type="button" onclick="check(this.form)" value="Login"/><br/>
-                 or <a href="register.html">Sign up</a>
+                 <input type="button" onclick="redirect(this.form)" value="Login"/><br/>
                 </form>
-
                 <script language="javascript">
-                    function check(form)
+                    function redirect(form)
                     {
-                        if(form.username.value=="user" && form.password.value=="user")
-                        {
+                       
                             window.location = "user.html"
-                        }
-                        else if(form.username.value=="admin" && form.password.value=="admin")
-                        {
-                           
-                            window.location = "admin.html"
-                         }
-                        else 
-                        {
-                            alert("Invalid Email or password")
-                        }
+                        
                     }
                 
                 
                 </script>
+                <a href="register.html">Sign up</a>
             </div>
                     
           
