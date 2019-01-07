@@ -7,6 +7,7 @@ install:
 
  script:
   - pytest tests -- cov=app 
+  - coverage
 
   after_success:
  - coveralls
