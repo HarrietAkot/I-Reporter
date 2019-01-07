@@ -9,9 +9,9 @@ app = Flask(__name__)
 
 incident_list = []
 
-# @app.route('/')
-# def index():
-#     return "Welcome"
+@app.route('/')
+def index():
+    return "Welcome"
 
     
 @app.route('/api/v1/red-flags/', methods=['POST'])
