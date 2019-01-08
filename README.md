@@ -1,4 +1,5 @@
 <a href="https://codeclimate.com/github/HarrietAkot/I-Reporter/maintainability"><img src="https://api.codeclimate.com/v1/badges/b49b18e11ea041b54c99/maintainability" /></a>
+[![Coverage Status](https://coveralls.io/repos/github/HarrietAkot/I-Reporter/badge.svg?branch=master)](https://coveralls.io/github/HarrietAkot/I-Reporter?branch=master)
 
 
 
