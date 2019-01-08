@@ -5,12 +5,12 @@ I-Reporter is a platform where people can report incidents of corruption.
 Corruption is a huge bane to Africa’s development. African countries must develop novel and localised solutions that will curb this menace, hence the birth of iReporter. iReporter enables any/every citizen to bring any form of corruption to the notice of appropriate authorities and the general public. Users can also report on things that needs government intervention
 
 ## Functionality
--Create a red-flag record
--Get all red flag records
--Get specific red flag record
--Edit a red-flag's location
--Edit a red-flag's comment
--Delete red flag record
+- Create a red-flag record
+- Get all red flag records
+- Get specific red flag record
+- Edit a red-flag's location
+- Edit a red-flag's comment
+- Delete red flag record
 
 ## Endpoints
 | Method | Endpoint | Description |
