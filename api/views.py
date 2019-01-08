@@ -1,11 +1,9 @@
 from flask import Flask, jsonify, request, json
-import  datetime
-from ..models.app_models import Incident
+from api.models import Incident
+import datetime
 # from validation import Validator
 
 app = Flask(__name__)
-
-
 
 incident_list = []
 
@@ -14,7 +12,7 @@ def index():
     return "Welcome"
 
     
-@app.route('/api/v1/red-flags/', methods=['POST'])
+@app.route('/api/v1/red-flags', methods=['POST'])
 def create_flag():
 
     data = request.get_json()
@@ -43,7 +41,7 @@ def create_flag():
 @app.route('/api/v1/red-flags/all', methods=['GET'])
 def get_flags():
 
-    return jsonify({"status":200, "data": incident_list})
+    return jsonify({"status":201, "data": incident_list})
     
 
 @app.route('/api/v1/red-flags/<int:red_flag_id>/', methods=['GET'])
@@ -78,10 +76,10 @@ def delete_red_flag(red_flag_id):
 
     completed_redflag = [redflag for redflag in incident_list if redflag['flag_id']== red_flag_id]
     incident_list.remove(completed_redflag[0])
-    return jsonify({"status":200,"data":incident_list})
+    return jsonify({"status":200, "data":incident_list})   
 
 
 
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
