@@ -1,3 +1,7 @@
+[![Coverage Status](https://coveralls.io/repos/github/HarrietAkot/I-Reporter/badge.svg?branch=master)](https://coveralls.io/github/HarrietAkot/I-Reporter?branch=master)
+
+
+
 # I-Reporter
 I-Reporter is a platform where people can report incidents of corruption.
 
