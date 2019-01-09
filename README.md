@@ -1,7 +1,6 @@
 <a href="https://codeclimate.com/github/HarrietAkot/I-Reporter/maintainability"><img src="https://api.codeclimate.com/v1/badges/b49b18e11ea041b54c99/maintainability" /></a>
-
 [![Build Status](https://travis-ci.org/HarrietAkot/I-Reporter.svg?branch=develop)](https://travis-ci.org/HarrietAkot/I-Reporter)
-
+[![Coverage Status](https://coveralls.io/repos/github/HarrietAkot/I-Reporter/badge.svg?branch=develop)](https://coveralls.io/github/HarrietAkot/I-Reporter?branch=develop)
 
 
 # I-Reporter
