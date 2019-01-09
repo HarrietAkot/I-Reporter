@@ -1,5 +1,0 @@
-[report]
-omit = 
-*/__init__.py
-*/validation.py
-*/app_models.py
