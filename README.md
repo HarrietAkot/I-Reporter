@@ -1,5 +1,4 @@
 [![Coverage Status](https://coveralls.io/repos/github/HarrietAkot/I-Reporter/badge.svg?branch=develop)](https://coveralls.io/github/HarrietAkot/I-Reporter?branch=develop)
-
 [![Build Status](https://travis-ci.org/HarrietAkot/I-Reporter.svg?branch=develop)](https://travis-ci.org/HarrietAkot/I-Reporter)
 
 
