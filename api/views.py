@@ -21,11 +21,11 @@ def create_flag():
     created_on = datetime.datetime.now()
     incident_type = data['incident_type']
     location = data['location']
-    comments = data['comments']
+    comment = data['comment']
     images = data['images']
     videos = data['videos']
 
-    redflag = Incident(flag_id, created_by, created_on, incident_type, location, comments, images, videos)
+    redflag = Incident(flag_id, created_by, created_on, incident_type, location, comment, images, videos)
     # error = Validator.validate(redflag)
     incident_list.append(redflag.__dict__)
     return jsonify({
@@ -41,10 +41,10 @@ def create_flag():
 @app.route('/api/v1/red-flags/all', methods=['GET'])
 def get_flags():
 
-    return jsonify({"status":201, "data": incident_list})
+    return jsonify({"status":200, "data": incident_list})
     
 
-@app.route('/api/v1/red-flags/<int:red_flag_id>/', methods=['GET'])
+@app.route('/api/v1/red-flags/<int:red_flag_id>', methods=['GET'])
 def get_specific_flag(red_flag_id):
 
     red_flag_by_id = [redflag for redflag in incident_list if redflag['flag_id'] == red_flag_id]
@@ -52,9 +52,9 @@ def get_specific_flag(red_flag_id):
 
    
 
-@app.route('/api/v1/red-flags/<int:red_flag_id>/', methods=['PATCH'])
+@app.route('/api/v1/red-flags/<int:red_flag_id>/location', methods=['PATCH'])
 def edit_flag_location(red_flag_id):
-    data = json.load(request.data)
+    data = request.get_json()
     new_location = data['location']
     red_flag_to_change_location = [redflag for redflag in incident_list if redflag['flag_id']== red_flag_id]
     red_flag_to_change_location[0]['location'] = new_location
@@ -62,13 +62,13 @@ def edit_flag_location(red_flag_id):
 
 
 
-@app.route('/api/v1/red-flags/<int:flag_id>/', methods=['PATCH'])
+@app.route('/api/v1/red-flags/<int:red_flag_id>/comment', methods=['PATCH'])
 def edit_flag_comment(red_flag_id):
     data = request.get_json()
     new_comment = data['comment']
     red_flag_to_change_comment = [redflag for redflag in incident_list if redflag['flag_id']== red_flag_id]
     red_flag_to_change_comment[0]['comment'] = new_comment
-    return jsonify({'incident': red_flag_to_change_comment})
+    return jsonify({"status":200,"incident": red_flag_to_change_comment})
    
 
 @app.route('/api/v1/red-flags/<int:red_flag_id>/', methods=['DELETE'])

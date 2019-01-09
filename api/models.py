@@ -9,7 +9,7 @@ class Incident:
         self.created_on = args[2]
         self.incident_type = args[3]
         self.location = args[4]
-        self.comments = args[5]
+        self.comment = args[5]
         self.images = args[6]
         self.videos = args[7]
 
