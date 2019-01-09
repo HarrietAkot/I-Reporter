@@ -1,1 +1,10 @@
-
+[report]
+omit =
+    */python?.?/*
+    */__pycache__/*
+    */__init__.py
+    */api/__init__.py
+    */api/__pycache__
+    */tests/__pycache__
+    */tests/__init__.py
+    
