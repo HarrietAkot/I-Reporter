@@ -53,11 +53,32 @@ a:hover{
   
 
   }
+  #usercontents{
+    width:90%;
+    height:100%;
+    padding-top:10%;
+    padding-left: 5%;
+    padding-right: 25%;
+    padding-bottom: 3%;
+    line-height: 250%;
+}
 
   #contents{
-      padding:10%;
+      width:20%;
+      height:442px;
+      padding-left: 5%;
+      padding-right: 0%;
+      padding-bottom: 3%;
       line-height: 250%;
+      float: left;
+      text-align: center;
   }
+  #rightcontents{
+    width:68%;
+    height:100%;
+    float:right;
+    
+}
 
 input[type=text]{
     width:60%;
@@ -138,12 +159,37 @@ ul li a:hover{
     border-top:20px solid #ffffff;
 }
 .col1, .col2, .col3 {
+    width:320px;
+    height:200px;
+    border: white;
+    padding-left: 5%;
+    border-left: 1px solid gray;
+    border-right: 2px solid gray;
+    border-top: 1px solid gray;
+    border-bottom: 2px solid gray;
+    padding-top: 5%;
+    margin-top: 5%;
+}
+.col1 h2{
+    color:rgb(10, 214, 10);
+}
+.col2 h2{
+    color:rgb(235, 153, 47);
+}
+.col3 h2{
+    color:rgb(235, 36, 36);
+}
+.leftright{
     float:left;
-    width:280px;
-    background-color:#cccccc;
-    padding:10px;
-    margin-top:20px;
-    height:300px;
+   
+    
+    
+    
+}
+.rightright{
+    
+    float:right;
+    
 }
 .col1, .col2 {
     margin-right:20px;
@@ -176,4 +222,5 @@ td{
 #add{
     padding:50px;
 }
+
 
