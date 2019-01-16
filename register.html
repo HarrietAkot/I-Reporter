@@ -10,20 +10,37 @@
              <div class="forms">
              <form name="harriet" action="" method="POST" onsubmit="return validate(this);">
                 <h3>Register here</h3>
-                 <input type="email" placeholder="Enter email" name="email" required/><br/>
+                <input type="text" placeholder="First Name" name="fname" required/><br/>
+                <input type="text" placeholder="Last Name" name="lname" required/><br/>
+                <input type="email" placeholder="Enter email" name="email" required/><br/>
                  <input type="text" placeholder="Phone number" name="number" required/><br/>
                  <input type="password" placeholder="Password" name="password" required/><br/>
                  <input type="password" placeholder="Re-enter Password" name="password2"/><br/>
-                 <input type="button" onclick="redirect(this.form)" value="Register"/><br/>
+                 <input type="button" onclick="return validate()" value="Register"/><br/>
                 </form>
                 <script language="javascript">
-                    function redirect(form)
-                    {
-                       
-                            window.location = "index.html"
-                        
-                    }
-                
+                   function validate() {
+                            var x = document.forms["harriet"]["fname"].value;
+                            var y = document.forms["harriet"]["lname"].value;
+                            var z = document.forms["harriet"]["email"].value;
+                            var a = document.forms["harriet"]["number"].value;
+                            if (x == "") {
+                                alert("First Name must be filled out");
+                            }
+                            if(y == ""){
+                                alert("Last Name must be filled out");
+                            }
+                            if(z == ""){
+                                alert("email must be filled out");
+                            }
+                            if(a == ""){
+                                alert("Phone Number must be filled out");
+                            }
+                            else
+                            {
+                                window.location = "user.html"
+                            }
+                            }
                 
                 </script>
             </div>

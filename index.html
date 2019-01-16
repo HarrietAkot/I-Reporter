@@ -11,15 +11,20 @@
                 <h3>I-Reporter Login</h3>
                  <input type="text" placeholder="Username" required name="username" required /><br/>
                  <input type="password" name="password" placeholder="Password" required/><br/>
-                 <input type="button" onclick="redirect(this.form)" value="Login"/><br/>
+                 <input type="button" onclick="return validate()" value="Login"/><br/>
                 </form>
                 <script language="javascript">
-                    function redirect(form)
-                    {
-                       
-                            window.location = "user.html"
-                        
-                    }
+                    function validate() {
+                            var x = document.forms["harriet"]["username"].value;
+                            if (x == "") {
+                                alert("Name must be filled out");
+                            }
+                            else
+                            {
+                                window.location = "user.html"
+                            }
+                            }
+
                 
                 
                 </script>
