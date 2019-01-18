@@ -25,8 +25,7 @@ def create_flag():
     videos = data['videos']
 
     redflag = Incident(flag_id, created_by, created_on, incident_type, location, comment, images, videos)
-    #redflag.validator(created_by, incident_type, location, comment, images, videos)
-    # error = Validator.validate(redflag)
+   
     incident_list.append(redflag.__dict__)
     return jsonify({
     'status': 201,
@@ -36,7 +35,7 @@ def create_flag():
        }), 201
 
     
-   # return jsonify({ 'message': incidents.create_red_flag(created_by, incident_type, location, comments)})
+   
 
 @app.route('/api/v1/red-flags/all', methods=['GET'])
 def get_flags():
