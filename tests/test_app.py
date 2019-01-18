@@ -10,6 +10,10 @@ class Testapp(unittest.TestCase):
         
     def test_index(self):
         resp = self.test_client.get('/')
+        message = json.loads(resp.data.decode())
+
+        self.assertEqual(message['message'],
+                         'Welcome')
         self.assertEqual(resp.status_code, 200)
 
     def test_create_red_flag(self):
@@ -78,12 +82,16 @@ class Testapp(unittest.TestCase):
             'location':'00.0,00.0'
         }
 
-        edit_specific_red_flag_location = self.test_client.patch(
+        edit_location = self.test_client.patch(
             '/api/v1/red-flags/1/location',
             content_type='application/json',
             data=json.dumps(new_location)
         )
-        self.assertEqual(edit_specific_red_flag_location.status_code, 200)
+        # message = json.loads(response.data.decode())
+
+        # self.assertEqual(message['message'],
+        #                  'created redflag reccord!')
+        self.assertEqual(edit_location.status_code, 200)
 
     def test_edit_red_flag_comment(self):
         incident = {
@@ -100,15 +108,15 @@ class Testapp(unittest.TestCase):
             data=json.dumps(incident)
         )
         new_comment = {
-            'location':'bribery'
+            'comment':'bribery'
         }
 
         edit_specific_red_flag_comment = self.test_client.patch(
-            '/api/v1/red-flags/1/location',
+            '/api/v1/red-flags/1/comment',
             content_type='application/json',
             data=json.dumps(new_comment)
         )
-        self.assertEqual(edit_specific_red_flag_comment.status_code, 200)
+        self.assertEqual(edit_specific_red_flag_comment.status_code, 201)
 
     def test_delete_red_flag(self):
         incident = {
@@ -128,7 +136,7 @@ class Testapp(unittest.TestCase):
             '/api/v1/red-flags/1',
             content_type='application/json'
         )
-        self.assertEqual(delete.status_code, 301)
+        self.assertEqual(delete.status_code, 200)
 
 if __name__ == '__main__':
     app.run(debug=True)

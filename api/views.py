@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request, json
 from api.models import Incident
 import datetime
-# from validation import Validator
 
 app = Flask(__name__)
 
@@ -26,6 +25,7 @@ def create_flag():
     videos = data['videos']
 
     redflag = Incident(flag_id, created_by, created_on, incident_type, location, comment, images, videos)
+    #redflag.validator(created_by, incident_type, location, comment, images, videos)
     # error = Validator.validate(redflag)
     incident_list.append(redflag.__dict__)
     return jsonify({
@@ -47,7 +47,7 @@ def get_flags():
 @app.route('/api/v1/red-flags/<int:red_flag_id>', methods=['GET'])
 def get_specific_flag(red_flag_id):
 
-    red_flag_by_id = [redflag for redflag in incident_list if redflag['flag_id'] == red_flag_id]
+    red_flag_by_id = [redflag for redflag in incident_list if redflag['flag_id']== red_flag_id]
     return jsonify({"status":200, "data":red_flag_by_id})
 
    
@@ -58,7 +58,10 @@ def edit_flag_location(red_flag_id):
     new_location = data['location']
     red_flag_to_change_location = [redflag for redflag in incident_list if redflag['flag_id']== red_flag_id]
     red_flag_to_change_location[0]['location'] = new_location
-    return jsonify({"status":200, "data":red_flag_to_change_location })
+    return jsonify({
+    "status":200, 
+    "message":"Edit successful",
+    "data":red_flag_to_change_location })
 
 
 
@@ -71,7 +74,7 @@ def edit_flag_comment(red_flag_id):
     return jsonify({"status":200,"incident": red_flag_to_change_comment})
    
 
-@app.route('/api/v1/red-flags/<int:red_flag_id>/', methods=['DELETE'])
+@app.route('/api/v1/red-flags/<int:red_flag_id>', methods=['DELETE'])
 def delete_red_flag(red_flag_id):
 
     completed_redflag = [redflag for redflag in incident_list if redflag['flag_id']== red_flag_id]
