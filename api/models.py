@@ -13,8 +13,6 @@ class Incident:
         self.images = args[6]
         self.videos = args[7]
 
- def getflag(self,red_flag_id):
-        for redflag in incident_list:
-            if redflag['flag_id']== red_flag_id:
+       
 
- 
+
