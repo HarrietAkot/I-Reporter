@@ -32,7 +32,7 @@ def create_flag():
     'message': 'created redflag reccord!',
     'id': flag_id,
     'data': redflag.__dict__
-       }), 201
+       }), 
 
     
    
@@ -58,11 +58,10 @@ def edit_flag_location(red_flag_id):
     red_flag_to_change_location = [redflag for redflag in incident_list if redflag['flag_id']== red_flag_id]
     red_flag_to_change_location[0]['location'] = new_location
     return jsonify({
-    "status":200, 
-    "message":"Edit successful",
-    "data":red_flag_to_change_location })
-
-
+       "status":200, 
+       "message":"Edit successful",
+       "data":red_flag_to_change_location 
+    })
 
 @app.route('/api/v1/red-flags/<int:red_flag_id>/comment', methods=['PATCH'])
 def edit_flag_comment(red_flag_id):
@@ -72,15 +71,12 @@ def edit_flag_comment(red_flag_id):
     red_flag_to_change_comment[0]['comment'] = new_comment
     return jsonify({"status":200,"incident": red_flag_to_change_comment})
    
-
 @app.route('/api/v1/red-flags/<int:red_flag_id>', methods=['DELETE'])
 def delete_red_flag(red_flag_id):
 
     completed_redflag = [redflag for redflag in incident_list if redflag['flag_id']== red_flag_id]
     incident_list.remove(completed_redflag[0])
     return jsonify({"status":200, "data":incident_list})   
-
-
 
 
 if __name__ == '__main__':
